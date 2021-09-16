@@ -1,54 +1,64 @@
+/* Utilisez Flexbox pour résoudre ces problèmes liés aux Navbars. */
+
 /* Nav #1 */
 /* Centrer sur X */
+
 .nav-1 {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 
 
 /* Nav #2 */
 /* Centrer sur Y et afficher les boutons à droite */
+
 .nav-2 {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
-
 .sign-in-btn {
-  margin-left: auto;
+    margin-left: auto;
+}
+.sign-up-btn {
+    margin-left: 15px;
 }
 
-.sign-up-btn {
-  margin-left: 15px;
-}
 
 
 /* Nav #3 */
 /* Mettre l'icône à gauche et les liens à droite */
+
 .nav-3 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+.nav-3 a:first-of-type {
+    margin-left: auto;
 }
 
-.nav-3 img {
-  margin-right: auto;
-}
+
 
 
 /* Nav #4 */
 /* Mettre l'icône Saturne au milieu et les liens à gauche */
+
+
 .nav-4 {
-  display: flex;
-  align-items: center;
-}
+    display: flex;
+    align-items: center;
 
+}
 .nav-4 .links-container {
-  width: 50%;
+    width: 50%;
+}
+.empty-layout {
+    width: 50%;
 }
 
-.empty-layout {
-  width: 50%;
-}
+
+
+
 
 
 /* Nav #5 */
@@ -57,25 +67,21 @@
 /* Afficher la patte de chat à gauche */
 /* Afficher les trois icônes à droite */
 
+
 .nav-5 {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
-
-.logo-link {
-  width: 100%;
+.nav-5 .logo-link {
+    width: 100%;
 }
-
 .container-navlinks {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-
 .nav-right {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
-
-
