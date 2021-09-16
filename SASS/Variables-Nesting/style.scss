@@ -1,0 +1,26 @@
+/* Ceci est une variable stockée avec un dollar*/
+
+$couleur-txt-base: crimson;
+
+.item {
+  color: $couleur-txt-base;
+}
+
+
+/* Ceci est le nesting, en français imbrication qui permet de coder bcp plus logiquement*/
+
+.container {
+  background: #000;
+
+  ul {
+    font-size:40px;
+
+    .item {
+      background: lightblue;
+
+      &:hover {
+        color: violet;
+      }
+    }
+  }
+}

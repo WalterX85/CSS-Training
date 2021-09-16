@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* Ceci est une variable stockée avec un dollar*/
+.item {
+  color: crimson;
+}
+
+/* Ceci est le nesting, en français imbrication qui permet de coder bcp plus logiquement*/
+.container {
+  background: #000;
+}
+.container ul {
+  font-size: 40px;
+}
+.container ul .item {
+  background: lightblue;
+}
+.container ul .item:hover {
+  color: violet;
+}
+
+/*# sourceMappingURL=style.css.map */
