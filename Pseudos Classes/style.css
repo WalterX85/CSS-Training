@@ -1,0 +1,47 @@
+.boxActive {
+    width: 250px;
+    height: 250px;
+    background: #fa8072;
+}
+.boxActive:active {
+  background: red
+}
+
+
+.inpFocus {
+    width: 250px;
+}
+.inpFocus:focus {
+  background: violet;
+}
+
+
+.pHover {
+    font-size: 50px;
+}
+.pHover:hover {
+  background:red;
+}
+
+
+.inpChecked {
+    width: 50px;
+    height: 50px;
+}
+.inpChecked:checked {
+  width: 150px;
+  height: 150px;
+}
+
+
+a {
+    font-size: 30px;
+}
+a:visited {
+  color:aqua;
+}
+
+
+.item:nth-child(2){
+  background: red;
+}
