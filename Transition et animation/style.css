@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+  height: 100vh;
+}
+
+.box-transition {
+background: #cd5c5c;
+width: 300px;
+height: 300px;
+margin: 30px;
+transition-duration: 0.4s;
+transition-property: background, width;
+transition-timing-function: linear;
+transition-delay: 0.5s;
+}
+
+.box-transition:hover{
+background: forestgreen;
+width: 500px;
+}
+
+.box-animation {
+background: #cd5c5c;
+width: 300px;
+height: 300px;
+margin: 30px;
+position: absolute;
+animation-name: spinAndMove;
+animation-duration: 2s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+
+@keyframes spinAndMove {
+0% {
+  right: 0;
+  top: 0;
+  background: #cd5c5c;
+}
+50% {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,50%) rotate(90deg);
+  background: yellowgreen;
+}
+100% {
+  right: 0;
+  top: 0;
+  background: #cd5c5c;
+}
+}
