@@ -1,0 +1,25 @@
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.monImg {
+  width: 100%;
+  height: 100%;
+  background-image: url(imgdefiaccueil1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.txt {
+  text-align: center;
+  padding-top: 200px;
+  color:aliceblue;
+  font-size: 30px;
+  font-family: 'Helvetica Neue';
+  margin: 0;
+  letter-spacing: 3px;
+}
