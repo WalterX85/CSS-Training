@@ -1,0 +1,363 @@
+$blancCasse : #f1f1f1;
+$blandGris : #f5f5f5;
+$sombre : #333;
+
+@mixin flexCentreX{
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 0; 
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+// Navbar
+.navbar {
+    height: 60px;
+    width: 100%;
+    background: $blandGris;
+    @include flexCentreX;
+    border-bottom: 1px solid black;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.contItems {
+    font-size: 22px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.items {
+    margin-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.items:hover {
+    color: #5f5f5f;
+}
+
+
+.logoMenuImg {
+    width: 30px;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .logoMenuImg {
+        display: block;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .items:nth-child(1){
+        padding-top: 20px;
+    }
+    .items {
+        background: $blandGris;
+        margin-right: 0;
+        padding: 10px 20px;
+        display: block;
+    }
+    
+    .contItems {
+        display: none;
+        border-top: 1px solid black;
+        /* background: green; */
+    }
+    /* Classe à toggle */
+    .responsive {
+        display: block;
+        margin-top: 50px;
+    }
+    
+
+}   
+
+// Accueil 
+
+.accueil {
+ 
+    height: 800px;
+    width: 100%;
+    background: $sombre;
+    background: url('../ressources/home.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+
+    h1 {
+        font-family: 'Abril Fatface', sans-serif;
+        color: $blancCasse;
+        font-size: 70px;
+        letter-spacing: 5px;
+        margin: 0;
+        position: relative;
+        padding-top: 150px;
+
+        &::first-letter {
+            font-size: 120px;
+        }
+
+    }
+
+    .sousTitreP {
+        color: $blancCasse;
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+    }
+
+
+}
+@media screen and (max-width: 1000px) {
+    .accueil h1 {
+        font-size: 50px;
+    }
+
+}
+@media screen and (max-width: 760px) {
+    .accueil {
+ 
+        height: 600px;
+    }
+    .accueil h1 {
+        font-size: 30px;
+    }
+    .accueil .sousTitreP {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .accueil {
+
+        height: 500px;
+        align-items: flex-start;
+    }
+    .accueil h1 {
+        margin: 0px 20px;
+    }
+    .accueil .sousTitreP {
+        margin: 0px 20px;
+    }
+    .accueil h1::first-letter {
+            font-size: 50px;
+        }
+}
+
+
+// Section 1 Txt et image
+.titreSec1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.txtImg {
+    padding-top: 20px;
+    width: 100%;
+    @include flexCentreX;
+    border-bottom: 1px dashed lightskyblue;
+
+    .flexContainerSection1 {
+        @include flexCentreX;
+        width: 1200px;
+        // height: 500px;
+        // background: #000;
+
+        .contImgSec1{
+            width: 45%;
+            // background: violet;
+            margin: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 2px;
+            }
+        }
+
+
+        .contTxtSec1 {
+            width: 45%;
+            background: azure;
+            margin: 20px;
+            border-radius: 2px;
+
+            h2 {
+                text-align: center;
+                font-size: 35px;
+            }
+
+            .sousTitreSec1 {
+                text-align: center;
+            }
+
+            hr {
+                width: 60px;
+            }
+
+            .txtSec1 {
+                font-size: 19px;
+                padding: 15px;
+
+                &::first-letter{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .txtImg .flexContainerSection1 {
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+    }
+    .txtImg .flexContainerSection1 .contImgSec1 {
+        width: 100%;
+    }
+    .txtImg .flexContainerSection1 .contTxtSec1 {
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 550px) {
+.titreSec1 {
+    font-size: 25px;
+}
+}
+// Section Portfolio d'images
+
+.titrePortfolio {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 550px) {
+    .titrePortfolio {
+        font-size: 25px;
+    }
+}
+.diviseurPort {
+    width: 20%;
+}
+.portFolioImg {
+    padding-top: 20px;
+    width: 100%;
+    @include flexCentreX;
+    padding-bottom: 100px;
+    .flexImgPortfolio {
+        width: 1200px;
+        @include flexCentreX;
+        flex-wrap: wrap;
+
+        .imgPort {
+            width: 300px;
+            margin: 20px;
+            height: 370px;
+            overflow: hidden;
+            background: #000;
+
+            img {
+               width: 100%;
+               height: auto;
+            }
+        }
+    }
+}
+
+// Parallax
+
+.paraScroll {
+    width: 100%;
+    height: 300px;
+    background: url('../ressources/para.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include flexCentreX;
+    align-items: center;
+    
+    h3 {
+        text-align: center;
+        color: $blancCasse;
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+}
+
+// Formulaire 
+
+.titreForm {
+    text-align: center;
+
+}
+
+.formulaire {
+    width: 100%;
+    @include flexCentreX;
+
+    form {
+        width: 60%;
+        
+        .row {
+            width: 100%;
+            
+
+
+            input, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            textarea {
+                height: 150px;
+            }
+
+            .subBtn {
+                width: 30%;
+                margin: 0 auto;
+                display: block;
+                margin-top: 10px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background: midnightblue;
+                    color: $blancCasse;
+                }
+            }
+        }
+        .row:nth-child(2), .row:nth-child(3){
+            margin-top: 30px;
+        }
+
+    }
+
+}
+
+footer {
+    @include flexCentreX;
+    border-top: 1px dashed $sombre;
+}
