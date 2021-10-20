@@ -1,0 +1,189 @@
+/* Fil rouge: sélecteur, dimensions, couleurs */
+/* Texte */
+/* Background */
+/* Boxes */
+/* Positionning */
+/* Flex */
+/* Grid */
+/* Pseudo classe */
+/* Debug */
+/* Responsive */
+
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* * {                Très utile pour débug!!!
+  border: 2px red solid;
+} */
+
+
+/* Propriétés de background */
+body {
+  font-family: 'Lato', sans-serif;
+  background: url(./asset/sunset.jpg) fixed center/cover; /* Si l'on souhaitait une page qui se scroll sur un background qui reste fixe, ns ajouterions "fixed" */
+  height: 100vh; /* Occupe 100% de la hauteur du navigateur */
+  /* overflow: hidden; Efface les marges et donc le scroll */
+} 
+
+/* Propriétés de texte */
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5rem; /* On utilise toujours le rem pour font-size */
+  color: rgba(255, 255, 255, 0.9); /*  Couleur v123 et Opacité v4 , une bonne opacité se situe à 0.25*/
+  text-shadow: 5px 3px 0 #000a0a;; /* X  Y  Flou  Couleur */
+  text-align: center; /* Permet de centrer du texte */
+  font-family: 'Roboto', sans-serif; /* cursive, sans serif */
+}
+
+
+/* Propriétés basiques d'une boxe */
+main {
+  background: whitesmoke;
+  width: 85%;
+  min-height: 500px;
+  /* margin et padding: 70px 20px;  Haut/Bas  Gauche/Droite */
+  /* margin et padding: 20px;  Haut/Bas/Gauche/Droite */
+  margin: 0 auto; /* Permet de centrer le conteneur */
+  padding: 10px 40px;
+  border-radius: 10px;
+  box-shadow: 7px 8px 20px #460546;
+}
+
+.positioning, .flexbox, .grid {
+  border:2px solid skyblue;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+
+/* ----------------------------Positionning---------------------------------- */
+.positioning {
+  position: relative;
+}
+
+h2 {
+  margin: 0;
+}
+
+#circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 10px;
+  background: skyblue;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  z-index: 1;
+}
+
+#rectangle {
+  height: 15px;
+  width: 100px;
+  background: slateblue;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* -------------------------Flexbox---------------------------- */
+
+/* Flexbox fonctionne très bien pour agencer des éléments de meme taille, dans des configurations plus complexes elles auront leurs limites. */
+ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;  /* Par défaut ul a un padding inline start de 40px, nous le retirons pour que le justify-content soit équilibré*/
+}
+
+li {
+  list-style-type: none;
+  font-size: 0.8rem;
+  height: 150px;
+  width: 150px;
+  background: #0db8b8;
+  /* Permet de centrer un item avec flex, align items et justify-content*/
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+
+/* ------------------------GRID------------------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.img {
+  text-align:center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "i1 i2"
+  "ta ta"
+  "bt bt";
+}
+
+input, textarea {
+  margin: 5px;
+  height: 45px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: 'Lato';
+}
+
+#firstname {
+  grid-area: i1;
+}
+
+#surname {
+  grid-area: i2;
+}
+
+textarea {
+  grid-area: ta;
+  resize: none; /* On empèche la redimension par défaut de la textarea, c'est une catastrophe avec le grid */
+}
+
+input[type="submit"] {
+  grid-area: bt;
+  cursor: pointer;
+  background: cyan;
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  background:darkblue;
+  color: white;
+}
+
+/* ----------------------Responsive-------------------- */
+
+@media screen and (max-width: 1000px){
+  .grid-container {
+    display: block;
+  }
+}
+ @media screen and (max-width: 550px){
+   form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i1"
+    "i2"
+    "ta"
+    "bt";
+  }
+ }
