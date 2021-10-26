@@ -187,7 +187,7 @@ h1 {
   color: aliceblue;
   margin: 1px;
   border-radius: 1px solid black;
-  
+  border-radius: 15px;
 }
 
 
@@ -218,6 +218,7 @@ h1 {
   "h j"
   "k k";
   padding: 20px;
+  border-radius: 5px;
 }
 
 .card1 {
@@ -261,6 +262,27 @@ h4 {
   border: 1px solid black;
 }
 
+/* --------------------------------------------------------------------------- */
+
+.containerGalery {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  border: 2px solid black;
+  border-radius: 15px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  margin: 1px;
+}
+
+.img {
+  height: 300px;
+  padding: 10px;
+  box-shadow:8px 8px 5px #09203f;
+  margin-top: 15px;
+  background:aliceblue;
+}
 
 /* --------------------------------------------------------------------------- */
 
