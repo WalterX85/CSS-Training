@@ -111,7 +111,8 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   border-radius: 5px;
   margin: 1px;
@@ -123,7 +124,7 @@ h1 {
   font-size: 1.5rem;
   text-shadow: 5px 5px 5px black;
   font-family: 'Rampart One', cursive;
-  background: rgba(255, 255, 255, 0.6);
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
   border-radius: 10px;
   padding: 0px 5px;
   text-decoration: none;
@@ -133,6 +134,52 @@ h1 {
 .link-video:hover {
   transform:translate(5px, 5px);
 }
+
+.linkDispo {
+  visibility:hidden;
+  
+  color: aliceblue;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 1.8rem;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  padding: 0 10px;
+  border-radius: 10px;
+  margin: 45px;
+  border: 1px solid aliceblue;
+  /* transition: 5s;
+  transform: translateX(-800px); */
+  
+}
+
+.linkDispoVisible {
+  
+  visibility: visible;
+  /* transform: translateX(0); */
+  /* animation-name: spinAndMove;
+  animation-duration: 10s;
+  animation-iteration-count: 5; */
+} 
+
+/* @keyframes spinAndMove {
+  0% {
+    left: 0%;
+  }
+  100% {
+    right: 100%;
+  }
+} */
+
+/* .mousemove {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  transition: 0.2s ease;
+  
+} */
+
 /* ---------------------------------------------------------------------------- */
 
 .recommandation {
