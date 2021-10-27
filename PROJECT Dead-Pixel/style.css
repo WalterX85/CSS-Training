@@ -58,8 +58,12 @@
   grid-template-rows: 1fr;
   grid-template-areas: "l t n n";
   border-radius: 5px;
-  margin: 1px;
-  border: 1px solid black;
+  margin:  0 1px;
+  border: 3px solid black;
+  position: sticky;
+  width: 100%;
+  transition: 0.8s;
+  
 }
 .logo {
   grid-area: l;
@@ -116,7 +120,9 @@ h1 {
   align-items: center;
   border-radius: 5px;
   margin: 1px;
-  border: 1px solid black;
+  border: 2px solid black;
+  
+  
 }
 .link-video{
   text-align: center;
@@ -129,6 +135,7 @@ h1 {
   padding: 0px 5px;
   text-decoration: none;
   border: 2px solid black;
+
 }
 
 .link-video:hover {
@@ -137,10 +144,9 @@ h1 {
 
 .linkDispo {
   visibility:hidden;
-  
   color: aliceblue;
   font-family: 'DotGothic16', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   padding: 0 10px;
   border-radius: 10px;
@@ -186,8 +192,9 @@ h1 {
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   color: aliceblue;
   margin: 1px;
-  border-radius: 1px solid black;
-  border-radius: 15px;
+  border: 2px solid black;
+  border-radius: 5px;
+  
 }
 
 
@@ -199,7 +206,7 @@ h1 {
   color: white;
   font-size: 1.8rem;
   text-shadow: 3px 3px 5px black;
-  position: relative;
+  
 }
 
 /* .title-return:after {
@@ -269,7 +276,7 @@ h4 {
   flex-wrap: wrap;
   background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
   border: 2px solid black;
-  border-radius: 15px;
+  border-radius: 5px;
   justify-content: space-around;
   align-items: center;
   padding: 15px;
@@ -280,7 +287,8 @@ h4 {
   height: 300px;
   padding: 10px;
   box-shadow:8px 8px 5px #09203f;
-  margin-top: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   background:aliceblue;
 }
 
@@ -361,6 +369,9 @@ h4 {
     "k";
     padding: 5px;
   }
+  .linkDispo{
+    font-size:1.5rem;
+  }
 }
 
 @media screen and (max-width:500px) {
@@ -383,5 +394,8 @@ h4 {
   }
   .title-return {
     font-size: 1.1rem;
+  }
+  .linkDispo{
+    font-size:1.3rem;
   }
 }
